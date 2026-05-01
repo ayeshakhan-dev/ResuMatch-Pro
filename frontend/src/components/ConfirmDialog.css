@@ -1,0 +1,25 @@
+.confirm-modal {
+  text-align: center;
+  max-width: 400px;
+}
+
+.confirm-icon {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+.confirm-modal h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.confirm-message {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.confirm-modal .modal-footer {
+  justify-content: center;
+}

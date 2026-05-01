@@ -1,0 +1,402 @@
+.navbar {
+  background: #1a1a2e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #2563eb;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ==================== LOGO ==================== */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.navbar-logo:hover {
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.navbar-logo-img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: white;
+  padding: 8px;
+  border: 2px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-logo:hover .navbar-logo-img {
+  transform: scale(1.05) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+  border-color: #60a5fa;
+}
+
+.navbar-logo-text {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #2563eb;
+  letter-spacing: -0.5px;
+}
+
+/* ==================== NAV MENU ==================== */
+.navbar-menu {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  color: #e2e8f0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  background: rgba(37, 99, 235, 0.2);
+  color: #60a5fa;
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+/* Super Admin nav link */
+.nav-link.superadmin-link {
+  color: #e94560 !important;
+  font-weight: 700;
+  border: 2px solid #e94560;
+  border-radius: 20px;
+  padding: 4px 14px !important;
+}
+
+.nav-link.superadmin-link:hover {
+  background: #e94560;
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+.nav-link.superadmin-link.active {
+  background: #e94560;
+  color: white !important;
+}
+
+/* ==================== USER SECTION ==================== */
+.navbar-user {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.user-profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(37, 99, 235, 0.3);
+  min-width: 200px;
+  user-select: none;
+}
+
+.user-profile-btn:hover {
+  background: rgba(37, 99, 235, 0.2);
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.user-avatar {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  flex-shrink: 0;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.user-name {
+  font-weight: 700;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.user-role {
+  font-size: 0.75rem;
+  color: #60a5fa;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dropdown-arrow {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  transition: transform 0.3s ease;
+  margin-left: 8px;
+}
+
+/* ==================== DROPDOWN MENU ==================== */
+.user-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  background: #1e293b;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  min-width: 280px;
+  z-index: 9999;
+  border: 2px solid #2563eb;
+  overflow: hidden;
+  animation: dropdownSlide 0.2s ease;
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.dropdown-avatar {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.dropdown-name {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.dropdown-email {
+  font-size: 0.82rem;
+  opacity: 0.9;
+  margin-bottom: 6px;
+  word-break: break-all;
+}
+
+.dropdown-role-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Super Admin badge */
+.dropdown-role-badge.badge-superadmin {
+  background: linear-gradient(135deg, #e94560, #a855f7);
+  color: white;
+  font-weight: 700;
+  border: none;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: #334155;
+  margin: 0;
+}
+
+/* Base dropdown item */
+.dropdown-item {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+/* Super Admin Panel link inside dropdown */
+.dropdown-item-link {
+  color: #e94560;
+}
+
+.dropdown-item-link:hover {
+  background: rgba(233, 69, 96, 0.1);
+  color: #ff6b85;
+}
+
+/* Logout button */
+.dropdown-item-logout {
+  color: #ef4444;
+}
+
+.dropdown-item-logout:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+}
+
+.dropdown-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ==================== OVERLAY ==================== */
+.dropdown-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9998;
+  background: transparent;
+  cursor: default;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .navbar-menu {
+    gap: 0.3rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .navbar-logo-img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .navbar-logo-text {
+    font-size: 1.4rem;
+  }
+
+  .user-profile-btn {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+  }
+
+  .navbar-menu {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 0.5rem;
+    border-top: 1px solid #334155;
+    margin-top: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .navbar-logo-text {
+    display: none;
+  }
+
+  .navbar-logo-img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .navbar-user {
+    margin-left: 0;
+  }
+
+  .user-profile-btn {
+    min-width: auto;
+    padding: 6px 12px;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .dropdown-arrow {
+    display: none;
+  }
+
+  .user-avatar {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+
+  .user-dropdown {
+    right: 0;
+    min-width: 260px;
+  }
+}

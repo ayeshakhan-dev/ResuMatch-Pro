@@ -1,0 +1,73 @@
+.datatable-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.datatable-search {
+  padding: 0.55rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  min-width: 220px;
+  transition: border-color 0.2s;
+}
+.datatable-search:focus { border-color: var(--primary); }
+
+.datatable-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.datatable-pagesize {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  background: white;
+  cursor: pointer;
+  outline: none;
+}
+
+.datatable-sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+.datatable-sortable:hover { color: var(--primary); }
+
+.datatable-sort-icon {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.datatable-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.datatable-page-btn {
+  padding: 0.35rem 0.7rem !important;
+  font-size: 0.85rem !important;
+  min-width: 36px;
+}
+
+.datatable-page-info {
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 0 0.5rem;
+  font-weight: 600;
+}
